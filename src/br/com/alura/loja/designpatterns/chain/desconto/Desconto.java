@@ -13,7 +13,7 @@ public abstract class Desconto {
 
     public BigDecimal calculo(Orcamento orcamento) {
         if (verificaDesconto(orcamento)) {
-            calcular(orcamento);
+            return calcular(orcamento);
         }
         return proximo.calcular(orcamento);
     }
