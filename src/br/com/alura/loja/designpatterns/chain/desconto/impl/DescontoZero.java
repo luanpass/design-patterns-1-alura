@@ -15,4 +15,9 @@ public class DescontoZero extends Desconto {
     public BigDecimal calcular(Orcamento orcamento) {
         return BigDecimal.ZERO;
     }
+
+    @Override
+    public boolean verificaDesconto(Orcamento orcamento) {
+        return true;
+    }
 }

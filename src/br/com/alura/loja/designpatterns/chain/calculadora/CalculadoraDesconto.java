@@ -13,6 +13,6 @@ public class CalculadoraDesconto {
     public BigDecimal calculaDesconto(Orcamento orcamento) {
         Desconto desconto = new DescontoCincoItens(new DescontoQuinheitosValor(new DescontoZero()));
 
-        return desconto.calcular(orcamento);
+        return desconto.calculo(orcamento);
     }
 }
