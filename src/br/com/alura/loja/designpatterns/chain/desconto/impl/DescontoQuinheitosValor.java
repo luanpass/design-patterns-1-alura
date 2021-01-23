@@ -14,6 +14,11 @@ public class DescontoQuinheitosValor extends Desconto {
 
     @Override
     public BigDecimal calcular(Orcamento orcamento) {
-        return orcamento.getValor().intValue() > 500 ? orcamento.getValor().multiply(new BigDecimal("0.2")) : proximo.calcular(orcamento);
+        return orcamento.getValor().multiply(new BigDecimal("0.2"));
+    }
+
+    @Override
+    public boolean verificaDesconto(Orcamento orcamento) {
+        return orcamento.getValor().intValue() > 500;
     }
 }
